@@ -1,0 +1,36 @@
+// Button
+//
+// Buttonsだよ
+//
+// Styleguide 2
+
+// Skins
+//
+// Buttons can and should be clicked.
+//
+// Markup: <button class="btn btn--medium {$modifiers}">
+//
+// .btn--signup - Highlight the button when hovered.
+//
+// Styleguide 2.1
+
+.btn {
+
+}
+.btn--signup {
+	display: inline-block;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 2px;
+	opacity: .8;
+	@include transition(color 0.3s ease-in-out, background-color 0.3s ease-in-out);
+	&:hover {
+		color: #222;
+		background-color: #fff;
+	}
+}
+.btn--medium {
+	height: 36px;
+	line-height: 36px;
+	padding: 0 1em;
+}

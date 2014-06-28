@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+	<meta charset="UTF-8">
+	<title>top</title>
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="http://code.angularjs.org/1.2.3/angular-animate.min.js"></script>
+	<script type="text/javascript" src="/static/js/app.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400|Raleway:400,200,100' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='/static/css/all.css' />
+</head>
+	<body>
+		<div class="l-wrapper">
+			<div class="l-header">
+	<div class="box-header">
+		<div class="box-header__wrapper">
+			<div class="box-header__inner d-tb">
+				<div class="box-header__logo d-tbc va-m">
+					<p class="fc-wt fw-b fz-20">Logo</p>
+				</div>
+				<div class="box-header__login d-tbc va-m ta-c w-200">
+					<a href="#" class="fc-wt">Login</a>
+					<span class="fc-wt pdl-4 pdr-4">/</span>
+					<a href="#" class="btn btn--signup btn--medium">Signup</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box-global-navi {{klass}}" ng-controller="globalNavi">
+		<div class="box-global-navi__wrapper">
+			<div class="box-global-navi__inner d-tb">
+				<div class="d-tbc va-m w-40p"></div>
+				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt" ng-click="isRankingOpen = !isRankingOpen">
+					Ranking
+				</a>
+				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt" ng-click="isTagsOpen = !isTagsOpen">
+					Tags
+				</a>
+				<div class="box-global-navi__item box-global-navi__item--search d-tbc va-m ta-c w-25p pdl-20">
+					<form class="form-search d-tb icon-wf fc-wt" data-icon-bf="&#xE602">
+						<input class="pdl-10 bxz-bb" type="search" placeholder="Search">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="box-global-navi__sub box-global-navi__sub--ranking ng-hide" ng-show="isRankingOpen"></div>
+		<!-- <div class="box-global-navi__sub box-global-navi__sub--tags" ng-init="isTagsOpen = false" ng-show="isTagsOpen"></div> -->
+	</div>
+</div>
+			<div class="l-contents cf">
+				
+	<div class="grid">
+		<div class="l-main">
+			<div class="u-pickup">
+				<h2 class="heading heading--a">Pickup</h2>
+				<div class="block block--3 block--margin fz-30">
+					
+					<div class="block__item">
+						<div class="article fz-16">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/640/350">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">言の葉の庭 Rain / 秦基博(Motohiro Hata)</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article fz-16">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/640/350">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">秒速5センチメートル 特典 「One more time, One more chance」 山崎まさよし</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article fz-16">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/640/350">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">僕らの夏の夢</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<div class="u-recently-Post">
+				<h2 class="heading heading--a">RecentlyPost</h2>
+				<div class="block block--4 block--margin">
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">Squarepusher - Iambic 9 Poetry</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">BUMP OF CHICKEN『車輪の唄』</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">TEENAGE MUTANT NINJA TURTLES Trailer</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">攻殻機動隊　STAND ALONE COMPLEX　第1話</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">「攻殻機動隊ARISE border:2」Blu-ray PV</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">Gotye - Somebody That I Used To Know (feat. Kimbra) - official video</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">Bruce Lee&#x27;s Game of Death Original</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">Future World Music - Follow Your Dream</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">座頭市 勝新太郎 「殺陣集」 Zatoichi.Shintaro Katsu</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+					<div class="block__item">
+						<div class="article">
+							<div class="article__header">
+								<div class="article__thumb">
+									<img src="http://placebox.es/307/210">
+								</div>
+							</div>
+							<div class="article__body">
+								<p class="article__body__title">こりゃめでてーな伊藤　カイジのものまね</p>
+								<!-- <p class="article__body__data">2014/02/20</p> -->
+								<!-- <p class="article__body__action">
+									<i class="icon-wf" data-icon-bf="&#xE600"></i>
+								</p> -->
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+				
+			</div>
+			<footer>
+</footer>
+		</div>
+	</body>
+</html>

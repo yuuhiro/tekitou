@@ -1,0 +1,36 @@
+<div class="l-header">
+	<div class="box-header">
+		<div class="box-header__wrapper">
+			<div class="box-header__inner d-tb">
+				<div class="box-header__logo d-tbc va-m">
+					<p class="fc-wt fw-b fz-20">Logo</p>
+				</div>
+				<div class="box-header__login d-tbc va-m ta-c w-200">
+					<a href="#" class="fc-wt">Login</a>
+					<span class="fc-wt pdl-4 pdr-4">/</span>
+					<a href="#" class="btn btn--signup btn--medium">Signup</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="box-global-navi \{{klass}}" ng-controller="globalNavi">
+		<div class="box-global-navi__wrapper">
+			<div class="box-global-navi__inner d-tb">
+				<div class="d-tbc va-m w-40p"></div>
+				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt" ng-click="isRankingOpen = !isRankingOpen">
+					Ranking
+				</a>
+				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt" ng-click="isTagsOpen = !isTagsOpen">
+					Tags
+				</a>
+				<div class="box-global-navi__item box-global-navi__item--search d-tbc va-m ta-c w-25p pdl-20">
+					<form class="form-search d-tb icon-wf fc-wt" data-icon-bf="&#xE602">
+						<input class="pdl-10 bxz-bb" type="search" placeholder="Search">
+					</form>
+				</div>
+			</div>
+		</div>
+		<div class="box-global-navi__sub box-global-navi__sub--ranking ng-hide" ng-show="isRankingOpen"></div>
+		<!-- <div class="box-global-navi__sub box-global-navi__sub--tags" ng-init="isTagsOpen = false" ng-show="isTagsOpen"></div> -->
+	</div>
+</div>

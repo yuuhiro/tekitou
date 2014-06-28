@@ -1,0 +1,12 @@
+$start : 1;
+$end   : 10;
+$grid  : 1 / $end;
+.grid {
+	float: left;
+	@include box-sizing(border-box);
+	@for $i from $start through $end {
+		&.grid--#{$i} {
+			width: percentage($grid * $i);
+		}
+	}
+}

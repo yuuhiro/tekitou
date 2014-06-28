@@ -1,0 +1,65 @@
+// Box
+//
+// Buttons can and should be clicked.
+//
+// Styleguide 1
+
+.box-header {
+	// background: image-url("background-2.png") repeat;
+	background: image-url("bg-3.png") repeat;
+	background-position: 100px 150px;
+}
+.box-header__wrapper {
+	background: hsla(281, 70%, 11%, .6);
+}
+.box-header__logo {
+
+}
+.box-header__inner {
+	height: 100px;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+
+// グローバルナビ
+.box-global-navi {
+	width: 100%;
+	// background: image-url("polygon_bg3.png") repeat;
+	background: image-url("bg-3.png") repeat;
+	background-position: 0 -280px;
+	&.box-global-navi--fixed {
+		position: fixed;
+		top: 0;
+	}
+}
+.box-global-navi__wrapper {
+	// @include background(linear-gradient(left, hsla(345,89%,33%,0.9) 0%, hsla(217,95%,47%,0.8) 100%));
+	@include background(linear-gradient(left, hsla(345, 79%, 30%, 0.85) 0%, hsla(226, 76%, 35%, 0.85) 100%));
+}
+.box-global-navi__inner {
+	height: 65px;
+	max-width: 1300px;
+	margin: 0 auto;
+}
+.box-global-navi__item {
+	@include transition(background-color 0.3s ease-in-out);
+	&:hover {
+		background-color: hsla(217, 95%, 47%, 0.5);
+	}
+}
+.box-global-navi__sub {
+	height: 60px;
+	// opacity: 1;
+	background: hsla(0, 0%, 22%, 0.98);
+	// @include transition(height linear 0.2s);
+	&.ng-hide-add,
+	&.ng-hide-remove {
+		@include transition(height linear 0.2s);
+	}
+	&.ng-hide {
+		display: block !important;
+		// opacity: 0;
+		height: 0;
+		transition-delay: 0ms, 500ms;
+	}
+}

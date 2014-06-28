@@ -1,0 +1,39 @@
+.block {
+	&:before,
+	&:after {
+		content: " ";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+	.block__item {
+		width: 100%;
+		float: left;
+		@include box-sizing(border-box);
+	}
+	@for $i from 2 through 10 {
+		&.block--#{$i} {
+			.block__item {
+				width: percentage(1 / $i);
+				&:nth-child(#{$i}n+1) {
+					clear: both;
+				}
+			}
+		}
+	}
+	&.block--margin {
+		margin: -0.5em;
+		.block__item {
+			padding: 0.5em;
+		}
+	}
+}
+
+// タブレット以上PC以下
+@media screen and (max-width: 960px) {
+}
+
+// タブレット以下
+@media screen and (max-width: 768px) {
+}
