@@ -47,6 +47,22 @@
 	&:hover {
 		background-color: hsla(217, 95%, 47%, 0.5);
 	}
+	&::before {
+		margin-right: 5px;
+		vertical-align: -1px;
+	}
+	&::after {
+		display: inline-block;
+		font-size: 0.5em;
+		vertical-align: 1px;
+		margin-left: 5px;
+		@include rotate(90deg);
+	}
+	&.is-open {
+		&::after {
+			@include rotate(-90deg);
+		}
+	}
 }
 .box-global-navi__sub {
 	height: 60px;

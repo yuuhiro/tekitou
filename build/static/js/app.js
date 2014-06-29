@@ -18,15 +18,34 @@ myApp.controller('logIn', function($scope, $window, _, $modal) {
 });
 
 myApp.controller('globalNavi', function($scope, $window, _) {
-	$scope.klass = '';
-	angular.element($window).on("scroll", _.throttle(function() {
-		if (this.pageYOffset >= 100)
+	$scope.isSticky = false;
+	$scope.isOpenSubMenu = false;
+	$scope.isOpenSubRanking = false;
+	$scope.isOpenSubTags = false;
+
+	$scope.accordionSubMenu = function(type) {
+		if(type === "ranking")
 		{
-			$scope.klass = "is-sticky";
+			$scope.isOpenSubMenu = !$scope.isOpenSubRanking;
+			$scope.isOpenSubRanking = !$scope.isOpenSubRanking;
+			$scope.isOpenSubTags = false;
 		}
 		else
 		{
-			$scope.klass = "";
+			$scope.isOpenSubMenu = !$scope.isOpenSubTags;
+			$scope.isOpenSubTags = !$scope.isOpenSubTags;
+			$scope.isOpenSubRanking = false;
+		}
+	};
+
+	angular.element($window).on("scroll", _.throttle(function() {
+		if (this.pageYOffset >= 100)
+		{
+			$scope.isSticky = true;
+		}
+		else
+		{
+			$scope.isSticky = false;
 		}
 		$scope.$apply();
 	}, 100));

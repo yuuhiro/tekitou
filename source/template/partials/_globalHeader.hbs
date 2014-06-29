@@ -6,32 +6,46 @@
 					<p class="fc-wt fw-b fz-20">Logo</p>
 				</div>
 				<div class="box-header__login d-tbc va-m ta-c w-200" ng-controller="logIn">
-					<a href="#" class="fc-wt" ng-click="login">Login</a>
+					<a href="#" class="" ng-click="login">Login</a>
 					<span class="fc-wt pdl-4 pdr-4">/</span>
 					<a href="#" class="btn btn--signup btn--medium" ng-click="signup()">Signup</a>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="box-global-navi \{{klass}}" ng-controller="globalNavi">
+	<div class="box-global-navi" ng-controller="globalNavi" ng-class="{'is-sticky': isSticky}">
 		<div class="box-global-navi__wrapper">
 			<div class="box-global-navi__inner d-tb">
-				<div class="d-tbc va-m w-40p"></div>
-				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt" ng-click="isRankingOpen = !isRankingOpen">
-					Ranking
-				</a>
-				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt" ng-click="isTagsOpen = !isTagsOpen">
-					Tags
-				</a>
-				<div class="box-global-navi__item box-global-navi__item--search d-tbc va-m ta-c w-25p pdl-20">
+				<div class="box-global-navi__item box-global-navi__item--search d-tbc va-m ta-c w-30p pdl-20">
 					<form class="form-search d-tb icon-wf fc-wt" data-icon-bf="&#xE602">
 						<input class="pdl-10 bxz-bb" type="search" placeholder="Search">
 					</form>
 				</div>
+				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt icon-wf" data-icon-bf="&#xE605" data-icon-af="&#xE608" ng-click="accordionSubMenu('ranking')" ng-class="{'is-open': isOpenSubRanking}">
+					Ranking
+				</a>
+				<a href="#" class="box-global-navi__item d-tbc va-m ta-c fc-wt icon-wf" data-icon-bf="&#xE600" data-icon-af="&#xE608" ng-click="accordionSubMenu('tags')" ng-class="{'is-open': isOpenSubTags}">
+					Tags
+				</a>
+				<div class="d-tbc va-m ta-r w-20p">
+				</div>
+				<div class="d-tbc va-m ta-r w-20p">
+					<div class="d-ib ta-c w-200" ng-show="isSticky" ng-controller="logIn">
+						<a href="#" class="" ng-click="login">Login</a>
+						<span class="fc-wt pdl-4 pdr-4">/</span>
+						<a href="#" class="btn btn--signup btn--medium" ng-click="signup()">Signup</a>
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="box-global-navi__sub box-global-navi__sub--ranking ng-hide" ng-show="isRankingOpen"></div>
-		<!-- <div class="box-global-navi__sub box-global-navi__sub--tags" ng-init="isTagsOpen = false" ng-show="isTagsOpen"></div> -->
+		<div class="box-global-navi__sub ng-hide" ng-show="isOpenSubMenu">
+			<div class="box-global-navi__sub__ranking ng-hide" ng-show="isOpenSubRanking">
+				SubRanking
+			</div>
+			<div class="box-global-navi__sub__tags ng-hide" ng-show="isOpenSubTags">
+				SubTags
+			</div>
+		</div>
 	</div>
 </div>
 <script type="text/ng-template" id="myModalContent">

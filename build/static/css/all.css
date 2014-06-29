@@ -1091,6 +1091,24 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .box-global-navi__item:hover {
   background-color: rgba(6, 93, 234, 0.5);
 }
+.box-global-navi__item::before {
+  margin-right: 5px;
+  vertical-align: -1px;
+}
+.box-global-navi__item::after {
+  display: inline-block;
+  font-size: 0.5em;
+  vertical-align: 1px;
+  margin-left: 5px;
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.box-global-navi__item.is-open::after {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
 
 .box-global-navi__sub {
   height: 60px;
