@@ -2,8 +2,8 @@
 
 @font-face {
 	font-family:"iconfont";
-	src:url("/static/font/icomoon.woff") format("woff"),
-		url("/static/font/icomoon.ttf") format("truetype");
+	src:font-url("icomoon.woff") format("woff"),
+		font-url("icomoon.ttf") format("truetype");
 	font-weight:normal;
 	font-style:normal;
 }
