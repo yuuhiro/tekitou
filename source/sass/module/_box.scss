@@ -57,6 +57,7 @@
 		vertical-align: 1px;
 		margin-left: 5px;
 		@include rotate(90deg);
+		@include transition(all 0.3s ease-in-out);
 	}
 	&.is-open {
 		&::after {
