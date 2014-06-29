@@ -27,7 +27,8 @@
 	// background: image-url("polygon_bg3.png") repeat;
 	background: image-url("bg-3.png") repeat;
 	background-position: 0 -280px;
-	&.box-global-navi--fixed {
+	position: absolute;
+	&.is-sticky {
 		position: fixed;
 		top: 0;
 	}

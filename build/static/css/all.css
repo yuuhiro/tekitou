@@ -406,7 +406,14 @@ h1 {
 }
 
 a {
+  color: #fff;
   text-decoration: none;
+  -webkit-transition: color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+a:hover {
+  color: #065dea;
 }
 
 input, textarea {
@@ -916,6 +923,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   width: 100%;
 }
 
+.l-header {
+  padding-bottom: 65px;
+}
+
 .l-contents {
   max-width: 1300px;
   margin: 0 auto;
@@ -1053,8 +1064,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   width: 100%;
   background: url('/static/images/bg-3.png?1403884725') repeat;
   background-position: 0 -280px;
+  position: absolute;
 }
-.box-global-navi.box-global-navi--fixed {
+.box-global-navi.is-sticky {
   position: fixed;
   top: 0;
 }
