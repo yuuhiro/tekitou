@@ -4,10 +4,12 @@
 	<meta charset="UTF-8">
 	<title>top</title>
 	<script src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.18/angular.min.js"></script>
 	<script src="http://code.angularjs.org/1.2.3/angular-animate.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.10.0/ui-bootstrap-tpls.min.js"></script>
 	<script type="text/javascript" src="/static/js/app.js"></script>
-	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400|Raleway:400,200,100' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400|Raleway:400,200,100' rel='stylesheet' type='text/css'> -->
+	<!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css"></link> -->
 	<link rel='stylesheet' href='/static/css/all.css' />
 </head>
 	<body>
@@ -19,10 +21,10 @@
 				<div class="box-header__logo d-tbc va-m">
 					<p class="fc-wt fw-b fz-20">Logo</p>
 				</div>
-				<div class="box-header__login d-tbc va-m ta-c w-200">
-					<a href="#" class="fc-wt">Login</a>
+				<div class="box-header__login d-tbc va-m ta-c w-200" ng-controller="logIn">
+					<a href="#" class="fc-wt" ng-click="login">Login</a>
 					<span class="fc-wt pdl-4 pdr-4">/</span>
-					<a href="#" class="btn btn--signup btn--medium">Signup</a>
+					<a href="#" class="btn btn--signup btn--medium" ng-click="signup()">Signup</a>
 				</div>
 			</div>
 		</div>
@@ -48,6 +50,17 @@
 		<!-- <div class="box-global-navi__sub box-global-navi__sub--tags" ng-init="isTagsOpen = false" ng-show="isTagsOpen"></div> -->
 	</div>
 </div>
+<script type="text/ng-template" id="myModalContent">
+	<div class="modal-header">
+		<h3 class="modal-title">Im a modal!</h3>
+	</div>
+	<div class="modal-body">
+	</div>
+	<div class="modal-footer">
+		<button class="btn btn-primary" ng-click="ok()">OK</button>
+		<button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+	</div>
+</script>
 			<div class="l-contents cf">
 				
 	<div class="grid">

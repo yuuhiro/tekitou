@@ -6,7 +6,7 @@
 
 .box-header {
 	// background: image-url("background-2.png") repeat;
-	background: image-url("bg-3.png") repeat;
+	background: image-url("polygon_bg2.png") repeat;
 	background-position: 100px 150px;
 }
 .box-header__wrapper {
@@ -25,7 +25,7 @@
 .box-global-navi {
 	width: 100%;
 	// background: image-url("polygon_bg3.png") repeat;
-	background: image-url("bg-3.png") repeat;
+	background: image-url("polygon_bg2.png") repeat;
 	background-position: 0 -280px;
 	position: absolute;
 	&.is-sticky {

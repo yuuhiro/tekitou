@@ -60,31 +60,20 @@ module.exports = function(grunt) {
 					port: 8081,
 					base: 'build',
 					// keepalive: true
+					livereload: true,
 					open: true
 				}
 			}
 		},
 
 		image: {
-			static: {
-				options: {
-					pngquant: true,
-					optipng: true,
-					advpng: true,
-					zopflipng: true,
-					pngcrush: true,
-					pngout: true,
-					jpegtran: true,
-					jpegRecompress: true,
-					jpegoptim: true,
-					gifsicle: true,
-					svgo: true
-				},
-				files: {
-					'build/static/images/': 'build/static/images/*.png',
-					'build/static/images/': 'build/static/images/*.jpg',
-					'build/static/images/': 'build/static/images/*.gif'
-				}
+			dynamic: {
+				files: [{
+					expand: true,
+					cwd: 'source/images/',
+					src: ['**/*.{png,jpg,gif,svg}'],
+					// dest: 'build/static/images/'
+				}]
 			}
 		},
 		styleguide: {
