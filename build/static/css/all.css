@@ -381,7 +381,7 @@ body {
   font-size: 1.6rem;
   color: #fff;
   word-wrap: break-word;
-  background: url('/static/images/polygon_bg.png?1404052356') repeat;
+  background: url('/static/images/polygon_bg.png?1404052746') repeat;
   background-attachment: fixed;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -854,6 +854,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 /*----------------------------------------
   size
 ----------------------------------------*/
+.w-120 {
+  width: 120px;
+}
+
 .w-200 {
   width: 200px;
 }
@@ -922,6 +926,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   width: 100%;
 }
 
+.l-wrapper {
+  overflow: hidden;
+}
+
 .l-header {
   padding-bottom: 65px;
 }
@@ -933,6 +941,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .grid {
+  width: 100%;
   float: left;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1044,8 +1053,108 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   padding: 0.5em;
 }
 
+@media screen and (max-width: 960px) {
+  .block.block--respond.block--4 .block__item {
+    width: 33.33333%;
+  }
+  .block.block--respond.block--4 .block__item:nth-child(3n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--5 .block__item {
+    width: 33.33333%;
+  }
+  .block.block--respond.block--5 .block__item:nth-child(3n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--6 .block__item {
+    width: 33.33333%;
+  }
+  .block.block--respond.block--6 .block__item:nth-child(3n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--7 .block__item {
+    width: 25%;
+  }
+  .block.block--respond.block--7 .block__item:nth-child(4n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--8 .block__item {
+    width: 25%;
+  }
+  .block.block--respond.block--8 .block__item:nth-child(4n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--9 .block__item {
+    width: 25%;
+  }
+  .block.block--respond.block--9 .block__item:nth-child(4n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--10 .block__item {
+    width: 25%;
+  }
+  .block.block--respond.block--10 .block__item:nth-child(4n+1) {
+    clear: both;
+  }
+}
+@media screen and (max-width: 768px) {
+  .block.block--respond.block--2 .block__item {
+    width: 100%;
+    clear: both;
+  }
+  .block.block--respond.block--3 .block__item {
+    width: 100%;
+    clear: both;
+  }
+  .block.block--respond.block--4 .block__item {
+    width: 100%;
+    clear: both;
+  }
+  .block.block--respond.block--5 .block__item {
+    width: 50%;
+  }
+  .block.block--respond.block--5 .block__item:nth-child(2n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--6 .block__item {
+    width: 50%;
+  }
+  .block.block--respond.block--6 .block__item:nth-child(2n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--7 .block__item {
+    width: 50%;
+  }
+  .block.block--respond.block--7 .block__item:nth-child(2n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--8 .block__item {
+    width: 50%;
+  }
+  .block.block--respond.block--8 .block__item:nth-child(2n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--9 .block__item {
+    width: 50%;
+  }
+  .block.block--respond.block--9 .block__item:nth-child(2n+1) {
+    clear: both;
+  }
+  .block.block--respond.block--10 .block__item {
+    width: 50%;
+  }
+  .block.block--respond.block--10 .block__item:nth-child(2n+1) {
+    clear: both;
+  }
+  .block.block--margin {
+    margin: -0.25em;
+  }
+  .block.block--margin .block__item {
+    padding: 0.25em;
+  }
+}
 .box-header {
-  background: url('/static/images/polygon_bg2.png?1403884725') repeat;
+  background: url('/static/images/polygon_bg2.png?1404052749') repeat;
   background-position: 100px 150px;
 }
 
@@ -1061,7 +1170,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .box-global-navi {
   width: 100%;
-  background: url('/static/images/polygon_bg2.png?1403884725') repeat;
+  background: url('/static/images/polygon_bg2.png?1404052749') repeat;
   background-position: 0 -280px;
   position: absolute;
 }
@@ -1136,24 +1245,87 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   padding: .5em 0 .3em 0;
 }
 
-.btn--signup {
-  display: inline-block;
-  color: #fff;
-  border: 1px solid #fff;
+.btn {
   border-radius: 2px;
-  opacity: .8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btn--transition {
   -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   -moz-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
-.btn--signup:hover {
+
+.btn--a {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #0c73e4;
+  background-color: #0c73e4;
+}
+.btn--a.btn--border {
+  color: #0c73e4;
+  border: 1px solid #0c73e4;
+  background-color: transparent;
+}
+.btn--a.btn--border:hover {
+  color: #fff;
+  background-color: #0c73e4;
+}
+
+.btn--b {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #84858f;
+  background-color: #84858f;
+}
+.btn--b.btn--border {
+  color: #84858f;
+  border: 1px solid #84858f;
+  background-color: transparent;
+}
+.btn--b.btn--border:hover {
+  color: #fff;
+  background-color: #84858f;
+}
+
+.btn--c {
+  display: inline-block;
+  color: #222;
+  border: 1px solid #fff;
+  background-color: #fff;
+  opacity: .8;
+}
+.btn--c.btn--border {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+}
+.btn--c.btn--border:hover {
   color: #222;
   background-color: #fff;
 }
 
+.btn--d {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #F02073;
+  background-color: #F02073;
+}
+.btn--d.btn--border {
+  color: #F02073;
+  border: 1px solid #F02073;
+  background-color: transparent;
+}
+.btn--d.btn--border:hover {
+  color: #fff;
+  background-color: #F02073;
+}
+
 .btn--medium {
-  height: 36px;
-  line-height: 36px;
+  height: 38px;
+  line-height: 38px;
   padding: 0 1em;
 }
 
@@ -1262,7 +1434,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
   min-height: 16.42857143px;
 }
 
@@ -1283,7 +1454,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .modal-footer {
   padding: 15px;
   text-align: right;
-  border-top: 1px solid #e5e5e5;
 }
 
 .modal-footer .btn + .btn {

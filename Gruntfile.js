@@ -80,13 +80,15 @@ module.exports = function(grunt) {
 			kss: {
 				options: {
 					framework: {
-						name: 'kss'
+						name: 'kss',
+						options: {
+							'css': 'build/static/css/all.css'
+						}
 					},
 					name: 'Style Guide',
-					// template: {
-					// 	src: 'templates/kss',
-					// 	include: ['templates/kss/public/prettify.js']
-					// }
+					template: {
+						src: 'source/kss_template'
+					}
 				},
 				files: {
 					'styleguide': 'source/sass/**/*.scss'
