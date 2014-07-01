@@ -17,21 +17,21 @@
 			<div class="l-header">
 	<div class="box-header">
 		<div class="box-header__wrapper">
-			<div class="box-header__inner d-tb">
+			<div class="box-header__inner d-tb grid grid--10">
 				<div class="box-header__logo d-tbc va-m">
 					<p class="fc-wt fw-b fz-20">Logo</p>
 				</div>
 				<div class="box-header__login d-tbc va-m ta-c w-200" ng-controller="logIn">
-					<a href="#" class="" ng-click="login">Login</a>
-					<span class="fc-wt pdl-4 pdr-4">/</span>
-					<a href="#" class="btn btn--c btn--border btn--medium btn--transition" ng-click="signup()">Signup</a>
+					<a href="#" class="va-m" ng-click="login">Login</a>
+					<span class="fc-wt pdl-4 pdr-4 va-m">/</span>
+					<a href="#" class="btn btn--c btn--border btn--medium btn--transition va-m" ng-click="signup()">Signup</a>
 				</div>
 			</div>
 		</div>
 	</div>
 	<div class="box-global-navi" ng-controller="globalNavi" ng-class="{'is-sticky': isSticky}">
 		<div class="box-global-navi__wrapper">
-			<div class="box-global-navi__inner d-tb">
+			<div class="box-global-navi__inner d-tb grid grid--10">
 				<div class="box-global-navi__item box-global-navi__item--search d-tbc va-m ta-c w-30p pdl-20">
 					<form class="form-search d-tb icon-wf fc-wt" data-icon-bf="&#xE602">
 						<input class="pdl-10 bxz-bb" type="search" placeholder="Search">
@@ -47,19 +47,35 @@
 				</div>
 				<div class="d-tbc va-m ta-r w-20p">
 					<div class="d-ib ta-c w-200" ng-show="isSticky" ng-controller="logIn">
-						<a href="#" class="" ng-click="login">Login</a>
-						<span class="fc-wt pdl-4 pdr-4">/</span>
-						<a href="#" class="btn btn--c btn--border btn--medium btn--transition" ng-click="signup()">Signup</a>
+						<a href="#" class="va-m" ng-click="login">Login</a>
+						<span class="fc-wt pdl-4 pdr-4 va-m">/</span>
+						<a href="#" class="btn btn--c btn--border btn--medium btn--transition va-m" ng-click="signup()">Signup</a>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="box-global-navi__sub ng-hide" ng-show="isOpenSubMenu">
-			<div class="box-global-navi__sub__ranking ng-hide" ng-show="isOpenSubRanking">
-				SubRanking
+		<div class="box-sub-navi ng-hide" ng-show="isOpenSubRanking">
+			<div class="box-sub-navi__item box-sub-navi__item--ranking d-tb grid grid--10 ng-hide" ng-show="isOpenSubRanking">
+				<div class="d-tbc va-m">
+					<a href="#" class="btn btn--f btn--medium btn--transition">Rank1</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Rank2</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Rank3</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Rank1</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Rank2</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Rank3</a>
+				</div>
 			</div>
-			<div class="box-global-navi__sub__tags ng-hide" ng-show="isOpenSubTags">
-				SubTags
+		</div>
+		<div class="box-sub-navi ng-hide" ng-show="isOpenSubTags">
+			<div class="box-sub-navi__item box-sub-navi__item--tags d-tb grid grid--10 ng-hide" ng-show="isOpenSubTags">
+				<div class="d-tbc va-m">
+					<a href="#" class="btn btn--f btn--medium btn--transition">Tag1</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Tag2</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Tag3</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Tag1</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Tag2</a>
+					<a href="#" class="btn btn--f btn--medium btn--transition">Tag3</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -77,7 +93,7 @@
 </script>
 			<div class="l-contents cf">
 				
-	<div class="grid">
+	<div class="grid grid--10">
 		<div class="l-main">
 			<div class="u-pickup">
 				<h2 class="heading heading--a">Pickup</h2>

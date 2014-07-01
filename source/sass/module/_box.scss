@@ -17,8 +17,6 @@
 }
 .box-header__inner {
 	height: 100px;
-	max-width: 1300px;
-	margin: 0 auto;
 }
 
 // グローバルナビ
@@ -39,8 +37,6 @@
 }
 .box-global-navi__inner {
 	height: 65px;
-	max-width: 1300px;
-	margin: 0 auto;
 }
 .box-global-navi__item {
 	@include transition(background-color 0.3s ease-in-out);
@@ -65,19 +61,29 @@
 		}
 	}
 }
-.box-global-navi__sub {
+.box-sub-navi {
 	height: 60px;
-	// opacity: 1;
+	width: 100%;
+	overflow: hidden;
 	background: hsla(0, 0%, 22%, 0.98);
-	// @include transition(height linear 0.2s);
 	&.ng-hide-add,
 	&.ng-hide-remove {
 		@include transition(height linear 0.2s);
 	}
 	&.ng-hide {
 		display: block !important;
-		// opacity: 0;
 		height: 0;
-		transition-delay: 0ms, 500ms;
+	}
+}
+.box-sub-navi__item {
+	height: 100%;
+	line-height: 0;
+	opacity: 1;
+	&.ng-hide-add,
+	&.ng-hide-remove {
+		@include transition(opacity linear 0.2s);
+	}
+	&.ng-hide {
+		opacity: 0;
 	}
 }

@@ -2,6 +2,7 @@ $start : 1;
 $end   : 10;
 $grid  : 1 / $end;
 .grid {
+	max-width: $maxWidth;
 	width: 100%;
 	float: left;
 	@include box-sizing(border-box);
@@ -9,5 +10,9 @@ $grid  : 1 / $end;
 		&.grid--#{$i} {
 			width: percentage($grid * $i);
 		}
+	}
+	&.grid--#{$end} {
+		margin: 0 auto;
+		float: none;
 	}
 }

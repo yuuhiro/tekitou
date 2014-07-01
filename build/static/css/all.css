@@ -935,12 +935,11 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .l-contents {
-  max-width: 1300px;
-  margin: 0 auto;
   margin-top: 30px;
 }
 
 .grid {
+  max-width: 1300px;
   width: 100%;
   float: left;
   -webkit-box-sizing: border-box;
@@ -976,6 +975,41 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 .grid.grid--10 {
   width: 100%;
+}
+.grid.grid--10 {
+  margin: 0 auto;
+  float: none;
+}
+
+/* Anmiation from http://tobiasahlin.com/spinkit/ */
+@-webkit-keyframes scaleout {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
+}
+
+@keyframes scaleout {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    opacity: 0;
+  }
 }
 
 .block:before, .block:after {
@@ -1164,8 +1198,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .box-header__inner {
   height: 100px;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
 .box-global-navi {
@@ -1188,8 +1220,6 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 
 .box-global-navi__inner {
   height: 65px;
-  max-width: 1300px;
-  margin: 0 auto;
 }
 
 .box-global-navi__item {
@@ -1222,19 +1252,34 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   transform: rotate(-90deg);
 }
 
-.box-global-navi__sub {
+.box-sub-navi {
   height: 60px;
+  width: 100%;
+  overflow: hidden;
   background: rgba(56, 56, 56, 0.98);
 }
-.box-global-navi__sub.ng-hide-add, .box-global-navi__sub.ng-hide-remove {
+.box-sub-navi.ng-hide-add, .box-sub-navi.ng-hide-remove {
   -webkit-transition: height linear 0.2s;
   -moz-transition: height linear 0.2s;
   transition: height linear 0.2s;
 }
-.box-global-navi__sub.ng-hide {
+.box-sub-navi.ng-hide {
   display: block !important;
   height: 0;
-  transition-delay: 0ms, 500ms;
+}
+
+.box-sub-navi__item {
+  height: 100%;
+  line-height: 0;
+  opacity: 1;
+}
+.box-sub-navi__item.ng-hide-add, .box-sub-navi__item.ng-hide-remove {
+  -webkit-transition: opacity linear 0.2s;
+  -moz-transition: opacity linear 0.2s;
+  transition: opacity linear 0.2s;
+}
+.box-sub-navi__item.ng-hide {
+  opacity: 0;
 }
 
 .heading {
@@ -1253,9 +1298,24 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 .btn--transition {
-  -webkit-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  -moz-transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  -moz-transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out, border 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+.btn--transition:active::before {
+  content: "";
+  position: absolute;
+  top: -32px;
+  /* (button height - height) / 2 */
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  -webkit-animation: scaleout 0.3s 1 ease-out;
+  animation: scaleout 0.3s 1 ease-out;
+  opacity: 0;
 }
 
 .btn--a {
@@ -1272,6 +1332,9 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .btn--a.btn--border:hover {
   color: #fff;
   background-color: #0c73e4;
+}
+.btn--a:active::before {
+  background-color: #3B50CE;
 }
 
 .btn--b {
@@ -1310,17 +1373,44 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 .btn--d {
   display: inline-block;
   color: #fff;
-  border: 1px solid #F02073;
-  background-color: #F02073;
+  border: 1px solid #f02073;
+  background-color: #f02073;
 }
 .btn--d.btn--border {
-  color: #F02073;
-  border: 1px solid #F02073;
+  color: #f02073;
+  border: 1px solid #f02073;
   background-color: transparent;
 }
 .btn--d.btn--border:hover {
   color: #fff;
-  background-color: #F02073;
+  background-color: #f02073;
+}
+
+.btn--e {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid #2b2438;
+  background-color: #2b2438;
+}
+.btn--e.btn--border {
+  color: #2b2438;
+  border: 1px solid #2b2438;
+  background-color: transparent;
+}
+.btn--e.btn--border:hover {
+  color: #fff;
+  background-color: #2b2438;
+}
+
+.btn--f {
+  display: inline-block;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0);
+}
+.btn--f:hover {
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 .btn--medium {
