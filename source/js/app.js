@@ -19,20 +19,17 @@ myApp.controller('logIn', function($scope, $window, _, $modal) {
 
 myApp.controller('globalNavi', function($scope, $window, _) {
 	$scope.isSticky = false;
-	$scope.isOpenSubMenu = false;
 	$scope.isOpenSubRanking = false;
 	$scope.isOpenSubTags = false;
 
 	$scope.accordionSubMenu = function(type) {
 		if(type === "ranking")
 		{
-			$scope.isOpenSubMenu = !$scope.isOpenSubRanking;
 			$scope.isOpenSubRanking = !$scope.isOpenSubRanking;
 			$scope.isOpenSubTags = false;
 		}
 		else
 		{
-			$scope.isOpenSubMenu = !$scope.isOpenSubTags;
 			$scope.isOpenSubTags = !$scope.isOpenSubTags;
 			$scope.isOpenSubRanking = false;
 		}
